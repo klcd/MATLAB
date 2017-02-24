@@ -1,0 +1,15 @@
+ph_energy_file
+ph_mode_file
+ph_file_type
+no_ph_k
+no_ph_energy
+sc_max_iteration
+sc_restart
+sc_rh_crit
+sc_id_crit
+sc_dist_dep
+sc_diag_def
+sc_k_coupling
+sc_scale_fact
+sc_vbound
+incoherent_injection

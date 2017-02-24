@@ -1,0 +1,26 @@
+ecut = 300:100:1100;
+c = zeros(size(ecut));
+
+
+for ii = 1:length(ecut)
+    
+    [a,~,b] = read_contcar(['e' num2str(ecut(ii)) '/CONTCAR']);
+    c(ii) = b(end);
+    
+%     disp(num2str(ii))
+%     cd([num2str(ii) 'p/']);
+%     system(['cp ../' num2str(ii-2) 'p/* .']);
+%     kid = fopen('KPOINTS','w');
+%     fprintf(kid,['K-Points\n 0\nG\n ' num2str(ii) ' ' num2str(ii) ' ' num2str(ii) '\n 0 0 0']);
+%     fclose(kid);
+%     system('intelrun -n 4 vasp > output </dev/null');
+%     cd ..
+end
+
+figure
+plot(ecut,0.5*c,'-o')
+xlabel('ENCUT')
+ylabel(['Distance between layers: c [' char(197) ']'])
+title('Cut off for the plane wave basis set')
+grid on
+xlim([300 700])

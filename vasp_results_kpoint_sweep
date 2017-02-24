@@ -1,0 +1,25 @@
+num_k = 3:2:19;
+c = zeros(size(num_k));
+a = zeros(size(num_k));
+
+
+for ii = 1:length(num_k)
+    
+    [~,~,b] = read_contcar([num2str(num_k(ii)) 'p/CONTCAR']);
+    c(ii) = norm(b(3,:));
+    a(ii) = norm(b(2,:));
+    
+end
+
+figure
+plot(num_k,0.5*c,'-o')
+xlabel('Size of the k-point grid')
+ylabel(['Distance between layers: c [' char(197) ']'])
+grid on
+xlim([3 15])
+figure
+plot(num_k,a,'-o')
+xlabel('Size of the k-point grid')
+ylabel(['inplane lattice constant: a [' char(197) ']'])
+grid on
+xlim([3 15])

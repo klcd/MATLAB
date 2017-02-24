@@ -1,0 +1,13 @@
+relax_atoms
+aplha
+beta
+strain_bc
+strain_model
+strain.on
+strain.Eps_xx
+strain.Eps_xy
+strain.Eps_xz
+strain.Eps_yy
+strain.Eps_yz
+strain.Eps_zz
+strain_domain

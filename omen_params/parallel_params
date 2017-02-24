@@ -1,0 +1,12 @@
+NPROW
+NPCOL
+NPCS
+spec_decomp
+CPU_ppoint
+CPU_per_kz_point
+CPU_per_sample
+CPU_per_vg_point
+CPU_per_vd_point
+CPU_per_temp_point
+CPU_per_wire
+CPU_per_bc
